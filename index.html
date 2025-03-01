@@ -1,7 +1,120 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>It's your month baby</title>
+    <style>
+        /* Tela inicial preta */
+        #initial-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 5em;
+            color: #fff;
+            z-index: 1000;
+            transition: 1s;
+        }
+
+        /* Conteúdo principal */
+        main {
+            min-height: 200vh;
+            background: transparent;
+        }
+
+        /* Grid de imagens de fundo */
+        .background-grid {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            display: grid;
+            grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+            z-index: -1;
+        }
+
+        .bg-image {
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        /* Texto formatado */
+        .poema {
+            position: relative;
+            width: 80%;
+            margin: 100vh auto 0;
+            padding: 2em;
+            background: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            white-space: pre-wrap;
+            font-family: 'Courier New', monospace;
+            line-height: 1.6;
+            border-radius: 10px;
+            backdrop-filter: blur(5px);
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            padding: 1em;
+            background: rgba(0,0,0,0.9);
+            color: #fff;
+        }
+
+        .heart {
+            color: #ff0000;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
 <body>
-  <h1>Hello World!</h1>
-  <p>My first GitHub Page 🚀</p>
+    <!-- Tela inicial -->
+    <div id="initial-screen">12...☀</div>
+
+    <!-- Conteúdo -->
+    <main>
+        <div class="background-grid">
+            <div class="bg-image" style="background-image: url(1.jpg)"></div>
+            <div class="bg-image" style="background-image: url(2.jpg)"></div>
+            <div class="bg-image" style="background-image: url(3.jpg)"></div>
+            <div class="bg-image" style="background-image: url(4.jpg)"></div>
+        </div>
+
+        <div class="poema">
+Dia 21 o começo de tudo, que semeas as tuas plantas e as vês crescer.
+Tudo é perfeito e tens cuidado ao máximo, brincamos até dizer chega e n saí da tua cabeça.
+Queremos mais e mais, mas até tudo tem limite, pergunta é, até quando vamos quebrar esses limites?
+Eu pegaria a minha 🛄💼 e por onde o Sol bate eu colocarei os meus braços em ti, por aonde a Lua te cega eu te guiarei, quando chegar à extinção, no fim de tudo e do nada, até lá, irei escrever cartas com o teu nome para que continues Imortal, mesmo que não saiba para aonde mandar.
+
+Muito tempo se passou, dia 21 chegou, madrugada a trocar mensagem, noite maravilhosa aquela, sempre a trocar mensagem e já com apelidos, tu eras a minha bae, bom dia e boa noite e eu era o teu bae. Mesmo com tantas plantas do lado era a mim q tu vinhas, tanto tempo e nem sei como ainda estavas na minha vida, acho que é como disseste, crescer juntos e falar para os nossos netos como fomos pa casa do caralho, ainda temos isso e muitas outras coisas para cumprir bae.
+
+Dia 21 chegou, apenas uma flor cresce neste dia, não direita, nem na esquerda, mas ao contrário, mas no final vai dar certo, vai tar direita e com uma boa fundação, um templo onde o Paraíso não só estará nele, mas algo que vamos construir juntos, algo que ainda quero descobrir, algo que colocarias com as tuas mãos lá, algo que eu te ajudaria a colocar lá e no final te abraçar, te beijar e te amar de verdade.
+        </div>
+    </main>
+
+    <footer>
+        <span class="heart">♥</span> By your lil mf nigga
+    </footer>
+
+    <script>
+        // Efeito de desaparecimento da tela inicial
+        window.addEventListener('scroll', () => {
+            const initialScreen = document.getElementById('initial-screen');
+            initialScreen.style.opacity = 1 - window.scrollY / 300;
+            
+            if(window.scrollY > 100) {
+                initialScreen.style.display = 'none';
+            }
+        });
+    </script>
 </body>
 </html>
